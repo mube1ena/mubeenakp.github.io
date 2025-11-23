@@ -12,194 +12,269 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #1f2937;
-            background: #f9fafb;
+            color: #1d1d1f;
+            background: #ffffff;
+            -webkit-font-smoothing: antialiased;
         }
         
         .container {
-            max-width: 900px;
+            max-width: 980px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
         
-        /* Header Section */
+        /* Hero Section - Apple/CRED Style */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 40px;
-            border-radius: 16px;
             text-align: center;
-            margin-bottom: 60px;
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+            padding: 120px 40px 100px;
+            margin-bottom: 80px;
+            background: #000000;
+            color: #f5f5f7;
+            border-radius: 0;
         }
         
         .hero h1 {
-            font-size: 3em;
-            margin-bottom: 16px;
+            font-size: 4em;
             font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            line-height: 1.05;
         }
         
         .hero .tagline {
-            font-size: 1.4em;
-            opacity: 0.95;
-            margin-bottom: 32px;
-            font-weight: 300;
+            font-size: 1.8em;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-bottom: 40px;
+            letter-spacing: -0.01em;
         }
         
         .hero .intro {
-            font-size: 1.1em;
+            font-size: 1.2em;
             max-width: 700px;
-            margin: 0 auto 32px;
-            line-height: 1.8;
-            opacity: 0.9;
+            margin: 0 auto 50px;
+            line-height: 1.6;
+            opacity: 0.7;
+            font-weight: 300;
         }
         
         .cta-buttons {
             display: flex;
-            gap: 16px;
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 40px;
         }
         
         .btn {
-            padding: 14px 32px;
-            border-radius: 8px;
+            padding: 16px 40px;
+            border-radius: 980px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
+            font-size: 1.05em;
             transition: all 0.3s ease;
             display: inline-block;
+            letter-spacing: -0.01em;
         }
         
         .btn-primary {
-            background: white;
-            color: #667eea;
+            background: #ffffff;
+            color: #000000;
+            border: 2px solid #ffffff;
         }
         
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.9);
+            transform: scale(1.02);
         }
         
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid white;
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
         }
         
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
         }
         
-        /* Section Styling */
+        /* Section Styling - Minimalist */
         .section {
-            background: white;
-            padding: 48px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 80px 0;
+            border-bottom: 1px solid #d2d2d7;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
         }
         
         .section-title {
-            font-size: 2.2em;
-            margin-bottom: 32px;
-            color: #1f2937;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 12px;
+            font-size: 3em;
+            margin-bottom: 60px;
+            color: #1d1d1f;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            text-align: center;
         }
         
-        /* Case Study Cards */
+        /* Metrics - Clean Grid */
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .metric-card {
+            text-align: center;
+            padding: 40px 20px;
+            border: 1px solid #d2d2d7;
+            border-radius: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            border-color: #1d1d1f;
+            transform: translateY(-4px);
+        }
+        
+        .metric-value {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #1d1d1f;
+            display: block;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+        
+        .metric-label {
+            color: #86868b;
+            font-size: 0.95em;
+            font-weight: 400;
+        }
+        
+        /* Case Study Cards - CRED Style */
         .case-study {
-            background: #f9fafb;
-            padding: 32px;
-            border-radius: 12px;
-            margin-bottom: 32px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .case-study:hover {
-            transform: translateX(8px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 60px 0;
+            margin-bottom: 60px;
         }
         
         .case-study h3 {
-            font-size: 1.8em;
-            color: #667eea;
-            margin-bottom: 8px;
+            font-size: 2.5em;
+            color: #1d1d1f;
+            margin-bottom: 16px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
         
         .case-study .subtitle {
-            font-size: 1.1em;
-            color: #6b7280;
-            margin-bottom: 20px;
-            font-style: italic;
+            font-size: 1.2em;
+            color: #86868b;
+            margin-bottom: 40px;
+            font-weight: 400;
         }
         
         .case-study-section {
-            margin-bottom: 24px;
+            margin-bottom: 48px;
         }
         
         .case-study-section h4 {
-            font-size: 1.2em;
-            color: #374151;
-            margin-bottom: 12px;
+            font-size: 1.5em;
+            color: #1d1d1f;
+            margin-bottom: 20px;
             font-weight: 600;
+            letter-spacing: -0.01em;
         }
         
         .case-study-section p, .case-study-section ul {
-            color: #4b5563;
+            color: #515154;
             line-height: 1.8;
+            font-size: 1.05em;
         }
         
         .case-study-section ul {
             margin-left: 24px;
+            list-style: none;
         }
         
         .case-study-section li {
-            margin-bottom: 8px;
+            margin-bottom: 16px;
+            padding-left: 24px;
+            position: relative;
         }
         
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 24px 0;
-        }
-        
-        .metric-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .metric-value {
-            font-size: 2.5em;
+        .case-study-section li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #1d1d1f;
             font-weight: 700;
-            color: #667eea;
-            display: block;
-            margin-bottom: 8px;
         }
         
-        .metric-label {
-            color: #6b7280;
+        /* Feature Pills - Minimal */
+        .feature-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 30px 0;
+        }
+        
+        .pill {
+            background: #f5f5f7;
+            color: #1d1d1f;
+            padding: 10px 20px;
+            border-radius: 980px;
             font-size: 0.9em;
+            font-weight: 500;
+            border: 1px solid #d2d2d7;
+        }
+        
+        .highlight {
+            background: #f5f5f7;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .result-box {
+            background: #f5f5f7;
+            border-left: 3px solid #1d1d1f;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .result-box strong {
+            color: #1d1d1f;
         }
         
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .skill-category {
+            padding: 40px;
+            border: 1px solid #d2d2d7;
+            border-radius: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            border-color: #1d1d1f;
         }
         
         .skill-category h4 {
-            font-size: 1.3em;
-            color: #667eea;
-            margin-bottom: 12px;
+            font-size: 1.5em;
+            color: #1d1d1f;
+            margin-bottom: 24px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
         }
         
         .skill-category ul {
@@ -207,9 +282,10 @@
         }
         
         .skill-category li {
-            padding: 8px 0;
-            color: #4b5563;
-            border-bottom: 1px solid #e5e7eb;
+            padding: 12px 0;
+            color: #515154;
+            border-bottom: 1px solid #d2d2d7;
+            font-size: 1.05em;
         }
         
         .skill-category li:last-child {
@@ -219,59 +295,56 @@
         /* Contact Section */
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-top: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
         }
         
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 16px;
-            background: #f9fafb;
-            border-radius: 8px;
+            gap: 16px;
+            padding: 24px;
+            border: 1px solid #d2d2d7;
+            border-radius: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            border-color: #1d1d1f;
+            transform: translateY(-2px);
+        }
+        
+        .contact-item span {
+            font-size: 1.5em;
         }
         
         .contact-item a {
-            color: #667eea;
+            color: #1d1d1f;
             text-decoration: none;
             font-weight: 500;
         }
         
         .contact-item a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Feature Pills */
-        .feature-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin: 20px 0;
-        }
-        
-        .pill {
-            background: #667eea;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 500;
+            opacity: 0.7;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             
             .hero .tagline {
-                font-size: 1.1em;
+                font-size: 1.3em;
             }
             
-            .section {
-                padding: 24px;
+            .section-title {
+                font-size: 2em;
+            }
+            
+            .case-study h3 {
+                font-size: 1.8em;
             }
             
             .metrics {
@@ -279,23 +352,23 @@
             }
         }
         
-        .highlight {
-            background: #fef3c7;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: 600;
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 60px 0;
+            color: #86868b;
+            font-size: 0.95em;
         }
         
-        .result-box {
-            background: #d1fae5;
-            border-left: 4px solid #10b981;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
+        .footer p {
+            margin: 8px 0;
         }
         
-        .result-box strong {
-            color: #065f46;
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: #d2d2d7;
+            margin: 80px 0;
         }
     </style>
 </head>
@@ -304,21 +377,20 @@
         <!-- Hero Section -->
         <div class="hero">
             <h1>Mubeena K P</h1>
-            <div class="tagline">Product Manager | User Research & Product Strategy</div>
+            <div class="tagline">Product Manager</div>
             <p class="intro">
                 I design products and programs that balance user needs with business outcomes. 
                 With experience scaling initiatives from 0 to 500+ users, I specialize in user research, 
-                product thinking, and building solutions that drive engagement without compromising user well-being.
+                product thinking, and building solutions that drive engagement.
             </p>
             <div class="cta-buttons">
-                <a href="#case-studies" class="btn btn-primary">View Case Studies</a>
+                <a href="#case-studies" class="btn btn-primary">View Work</a>
                 <a href="#contact" class="btn btn-secondary">Get in Touch</a>
             </div>
         </div>
 
         <!-- Recent Work Highlights -->
         <div class="section">
-            <h2 class="section-title">Recent Work</h2>
             <div class="metrics">
                 <div class="metric-card">
                     <span class="metric-value">500+</span>
@@ -341,12 +413,12 @@
 
         <!-- Case Studies Section -->
         <div class="section" id="case-studies">
-            <h2 class="section-title">Product Case Studies</h2>
+            <h2 class="section-title">Case Studies</h2>
             
             <!-- Case Study 1: Instagram Reels -->
             <div class="case-study">
                 <h3>Instagram Reels: Reducing Cognitive Fatigue</h3>
-                <div class="subtitle">Product Improvement Proposal | User Research & Feature Prioritization</div>
+                <div class="subtitle">Product Improvement Proposal • User Research & Feature Prioritization</div>
                 
                 <div class="feature-pills">
                     <span class="pill">User Research</span>
@@ -356,26 +428,59 @@
                 </div>
 
                 <div class="case-study-section">
-                    <h4>🎯 Problem Statement</h4>
+                    <h4>Product Overview</h4>
                     <p>
-                        Instagram Reels drives high engagement, but users experience mental fatigue and screen-time guilt, 
-                        leading to cyclical uninstall/reinstall behavior. <span class="highlight">How might we reduce cognitive 
-                        fatigue while protecting ad revenue?</span>
+                        Instagram Reels is a short-form video platform with an ad-driven business model. 
+                        Key metrics: DAU (Daily Active Users), MAU (Monthly Active Users), session length, and ad impressions. 
+                        Reels has become the daily go-to platform for young users in India.
                     </p>
                 </div>
 
                 <div class="case-study-section">
-                    <h4>🔍 Research Methodology</h4>
-                    <p>Conducted quantitative survey with 29 participants (ages 18-24, CS graduates, daily Reels users in India)</p>
+                    <h4>User Persona</h4>
                     <ul>
-                        <li><strong>Survey Design:</strong> 15 questions covering usage patterns, pain points, and feature preferences</li>
-                        <li><strong>Data Analysis:</strong> Identified patterns in user behavior, churn risk, and satisfaction metrics</li>
-                        <li><strong>User Segmentation:</strong> Categorized users by usage intensity and churn risk</li>
+                        <li>Age: 18-24 years</li>
+                        <li>Education: Computer Science graduates</li>
+                        <li>Location: India</li>
+                        <li>Behavior: Watches Reels daily, often in multiple sessions throughout the day</li>
                     </ul>
                 </div>
 
                 <div class="case-study-section">
-                    <h4>📊 Key Insights</h4>
+                    <h4>Problem Statement</h4>
+                    <p>
+                        Reels drives high engagement, but mental fatigue combined with high screen-time leads to uninstall/reinstall cycles. 
+                        <span class="highlight">How might we reduce cognitive fatigue while protecting ad revenue?</span>
+                    </p>
+                    <p style="margin-top: 16px;"><strong>User Pain Points Identified:</strong></p>
+                    <ul>
+                        <li>Infinite scroll leading to loss of self-control</li>
+                        <li>Screen time guilt after prolonged usage</li>
+                        <li>Mental fatigue after binge-watching sessions</li>
+                        <li>FOMO-driven uninstall/reinstall cycles</li>
+                        <li>Repetitive content loop causing dissatisfaction</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>Opportunity</h4>
+                    <p>Create a healthier Reels experience that:</p>
+                    <ul>
+                        <li>Builds higher trust and user loyalty</li>
+                        <li>Improves long-term session length quality</li>
+                        <li>Protects ad revenue while enhancing user well-being</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>Research Methodology</h4>
+                    <p><strong>Survey Date:</strong> September 27, 2024</p>
+                    <p><strong>Sample Size:</strong> 29 participants (ages 18-24, CS graduates, daily Reels users in India)</p>
+                    <p><strong>Method:</strong> Quantitative survey with 15 questions covering usage patterns, pain points, and feature preferences</p>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>Key Insights from Data</h4>
                     <div class="metrics">
                         <div class="metric-card">
                             <span class="metric-value">44.8%</span>
@@ -383,62 +488,144 @@
                         </div>
                         <div class="metric-card">
                             <span class="metric-value">83.3%</span>
-                            <span class="metric-label">Use Reels daily (multiple sessions)</span>
+                            <span class="metric-label">Watch Reels daily (multiple sessions)</span>
                         </div>
                         <div class="metric-card">
                             <span class="metric-value">34.5%</span>
                             <span class="metric-label">Uninstalled multiple times</span>
                         </div>
                     </div>
-                    <p><strong>Core Insight:</strong> High engagement correlates with high churn risk. Users love Reels but feel guilty about time spent, leading to cyclical uninstall behavior.</p>
+                    <p style="margin-top: 20px;"><strong>Critical Finding:</strong> HIGH ENGAGEMENT = HIGH CHURN RISK</p>
+                    <p>Users who engage most heavily (83.3% daily usage) are the same users experiencing fatigue-driven churn (44.8% have uninstalled). This paradox indicates that while the product is engaging, it's not sustainable for user well-being.</p>
                 </div>
 
                 <div class="case-study-section">
-                    <h4>💡 Proposed Solutions</h4>
+                    <h4>Proposed Solutions</h4>
+                    
+                    <p><strong>1. Mood-Based Reels Filter</strong></p>
+                    <p>Allow users to personalize their feed by selecting their current mood or energy level:</p>
                     <ul>
-                        <li><strong>Mood-Based Content Filters:</strong> Allow users to select mood/energy level (Fun, Chill, Learning) to personalize feed and reduce dopamine overdrive</li>
-                        <li><strong>Smart Pause Cards:</strong> AI-driven break prompts after extended scrolling sessions, reducing cognitive fatigue</li>
-                        <li><strong>Time Limit Controls:</strong> Gentle reminders and customizable break intervals to help users maintain self-control</li>
+                        <li><strong>Fun Mode:</strong> Entertainment-focused, lighthearted content</li>
+                        <li><strong>Chill Mode:</strong> Relaxing, calming content (ASMR, nature, slow-paced)</li>
+                        <li><strong>Learning Mode:</strong> Educational content, tutorials, informative Reels</li>
                     </ul>
-                </div>
-
-                <div class="case-study-section">
-                    <h4>🎯 Feature Prioritization</h4>
-                    <p>Used user interest survey data + business impact analysis:</p>
+                    <p><strong>Why it works:</strong> Gives users agency and control, reduces dopamine overdrive leading to burnout, personalizes experience based on user state</p>
+                    
+                    <p style="margin-top: 24px;"><strong>2. Smart Pause Cards</strong></p>
+                    <p>AI-driven break prompts that appear after extended scrolling sessions:</p>
                     <ul>
-                        <li><strong>#1 Priority - Mood Filters:</strong> 72.4% user interest, addresses content quality (highest user demand)</li>
-                        <li><strong>#2 Priority - Time Limits:</strong> 41.4% rated as "most helpful," critical behavioral tool</li>
-                        <li><strong>#3 Priority - Pause Cards:</strong> Low user preference (10.3%) but mandatory AI-driven intervention to protect high-risk users</li>
+                        <li>Triggered after detecting prolonged usage patterns (e.g., 30+ minutes continuous scrolling)</li>
+                        <li>Gentle nudges: "You've been scrolling for a while. Take a quick break?"</li>
+                        <li>Option to snooze, dismiss, or set custom intervals</li>
                     </ul>
+                    <p><strong>Why it works:</strong> Mandatory AI intervention to protect high-risk users without feeling intrusive</p>
+                    
+                    <p style="margin-top: 24px;"><strong>3. Time Limit Controls</strong></p>
+                    <p>User-customizable daily time limits with gentle reminders:</p>
+                    <ul>
+                        <li>Set daily Reels watching goals (e.g., 30 mins, 1 hour, 2 hours)</li>
+                        <li>Soft notifications when approaching limit</li>
+                        <li>Option to extend if needed (maintains user autonomy)</li>
+                        <li>Weekly insights showing Reels usage patterns</li>
+                    </ul>
+                    <p><strong>Why it works:</strong> Critical behavioral tool addressing loss of self-control (primary user pain point)</p>
                 </div>
 
                 <div class="case-study-section">
-                    <h4>📈 Expected Impact</h4>
-                    <div class="result-box">
-                        <strong>Success Metrics:</strong>
+                    <h4>Feature Prioritization Framework</h4>
+                    <p>Used user interest survey data combined with business impact analysis to prioritize features:</p>
+                    
+                    <div class="result-box" style="margin-top: 20px;">
+                        <p><strong>#1 Priority: Mood-Based Filters (Fun, Chill, Learning)</strong></p>
                         <ul style="margin-top: 12px;">
-                            <li>Reduction in uninstall rate due to fatigue (target: 20% decrease)</li>
-                            <li>Increase in engagement time with higher satisfaction scores</li>
-                            <li>Higher Reels saves & shares (indicator of content quality perception)</li>
-                            <li>Maintain or increase ad impressions (protect revenue)</li>
+                            <li><strong>User Ranking:</strong> #1 Most Helpful (44.8% of users)</li>
+                            <li><strong>User Interest:</strong> High (72.4% expressed interest)</li>
+                            <li><strong>Recommendation:</strong> PRIORITIZE - Addresses content quality and variety, the highest user demand</li>
+                            <li><strong>Business Impact:</strong> Improves content satisfaction without reducing engagement</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="result-box" style="margin-top: 20px;">
+                        <p><strong>#2 Priority: Limit Daily Watch Time</strong></p>
+                        <ul style="margin-top: 12px;">
+                            <li><strong>User Ranking:</strong> #2 Most Helpful (41.4% of users)</li>
+                            <li><strong>User Interest:</strong> High priority</li>
+                            <li><strong>Recommendation:</strong> High Priority - Critical behavioral tool addressing loss of self-control</li>
+                            <li><strong>Business Impact:</strong> May reduce total session time but improves session quality and user retention</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="result-box" style="margin-top: 20px;">
+                        <p><strong>#3 Priority: "Pause Card" Reminder</strong></p>
+                        <ul style="margin-top: 12px;">
+                            <li><strong>User Ranking:</strong> Low Preference (10.3% ranked it as favorite)</li>
+                            <li><strong>User Confidence:</strong> Low (51.7% rated confidence as 1 or 2 out of 5)</li>
+                            <li><strong>Recommendation:</strong> REPOSITION - Don't present as user-favorite. Frame as mandatory, AI-driven intervention to protect the 41.4% who feel guilty/tired</li>
+                            <li><strong>Business Impact:</strong> Positions Instagram as caring about user well-being, builds brand trust</li>
+                        </ul>
+                    </div>
+                    
+                    <p style="margin-top: 24px;"><strong>Key Conclusion from Prioritization:</strong> Users crave control over content quality. The Mood Filter addresses this directly while maintaining engagement.</p>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>Why This Matters for Users</h4>
+                    <ul>
+                        <li><strong>Returns Agency & Control:</strong> Users regain control over their Reels experience through mood selection and time limits</li>
+                        <li><strong>Reduces Dopamine Overdrive:</strong> Mood-based filtering prevents endless stimulation that leads to burnout</li>
+                        <li><strong>Builds Brand Trust:</strong> Demonstrates that "Instagram cares about my well-being," not just engagement metrics</li>
+                        <li><strong>Sustainable Engagement:</strong> Converts unhealthy binge-watching into conscious, satisfying consumption</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>Success Metrics & Expected Impact</h4>
+                    <div class="result-box">
+                        <strong>Primary Success Metrics:</strong>
+                        <ul style="margin-top: 12px;">
+                            <li><strong>Reduction in uninstall rate:</strong> Target 20% decrease in fatigue-driven uninstalls</li>
+                            <li><strong>Increase in engagement time with satisfaction:</strong> Higher session quality scores even if total time decreases slightly</li>
+                            <li><strong>Higher Reels saves & shares:</strong> Indicator that users find content more valuable and relevant</li>
+                            <li><strong>Maintain/increase ad impressions:</strong> Protect revenue while improving user experience</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="result-box" style="margin-top: 20px;">
+                        <strong>Long-Term Business Impact:</strong>
+                        <ul style="margin-top: 12px;">
+                            <li>Higher user lifetime value due to reduced churn</li>
+                            <li>Improved brand perception and trust</li>
+                            <li>Better long-term session length quality (sustainable engagement)</li>
+                            <li>Competitive differentiation in market focused on ethical design</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="case-study-section">
-                    <h4>🏆 Outcome</h4>
+                    <h4>Next Steps & Iteration Plan</h4>
+                    <ol style="margin-left: 24px; list-style: decimal;">
+                        <li><strong>Expand Survey:</strong> Scale user research to 50+ participants for validation</li>
+                        <li><strong>Prototype Mood Filter:</strong> Build MVP and test engagement uplift in controlled A/B test</li>
+                        <li><strong>Validate with Larger Dataset:</strong> Iterate based on quantitative and qualitative feedback</li>
+                        <li><strong>Measure Impact:</strong> Track uninstall rates, satisfaction scores, and ad revenue over 3-month period</li>
+                    </ol>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>Outcome</h4>
                     <p>
-                        This case study demonstrated user research, data analysis, and product thinking skills. 
                         <span class="highlight">Received Product Manager offer from SarvmAI</span> based on this work, 
                         validating the approach and prioritization framework.
                     </p>
                 </div>
             </div>
 
+            <div class="divider"></div>
+
             <!-- Case Study 2: Kerala Startup Mission -->
             <div class="case-study">
-                <h3>Kerala Startup Mission: Scaling Women in Tech Community</h3>
-                <div class="subtitle">Community Product Design | Program Management | Growth Strategy</div>
+                <h3>Scaling Women in Tech Community</h3>
+                <div class="subtitle">Community Product Design • Program Management • Growth Strategy</div>
                 
                 <div class="feature-pills">
                     <span class="pill">Community Building</span>
@@ -448,15 +635,15 @@
                 </div>
 
                 <div class="case-study-section">
-                    <h4>🎯 Challenge</h4>
+                    <h4>Challenge</h4>
                     <p>
-                        Kerala Startup Mission needed to scale their Women in Deep Tech initiative to reach more women 
-                        entrepreneurs across Kerala. The existing program lacked structured onboarding and engagement frameworks.
+                        Kerala Startup Mission needed to scale their Women in Deep Tech initiative. 
+                        The program lacked structured onboarding and engagement frameworks.
                     </p>
                 </div>
 
                 <div class="case-study-section">
-                    <h4>👤 My Role</h4>
+                    <h4>My Role</h4>
                     <p><strong>Program Manager & Community Product Designer</strong></p>
                     <ul>
                         <li>Designed community structure and onboarding experience from scratch</li>
@@ -467,34 +654,17 @@
                 </div>
 
                 <div class="case-study-section">
-                    <h4>🔍 User Research Process</h4>
-                    <ul>
-                        <li><strong>Surveys & Interviews:</strong> Conducted feedback sessions with 50+ community members</li>
-                        <li><strong>Pain Points Identified:</strong> Lack of clear onboarding, inconsistent engagement, unclear program value proposition</li>
-                        <li><strong>Opportunity:</strong> Create structured experience that reduces time-to-value and increases retention</li>
-                    </ul>
-                </div>
-
-                <div class="case-study-section">
-                    <h4>💡 Solution Design</h4>
+                    <h4>Solution Design</h4>
                     <p><strong>3-Phase Onboarding System:</strong></p>
                     <ul>
-                        <li><strong>Phase 1 - Welcome & Orientation:</strong> Automated welcome sequence, community guidelines, expectation setting</li>
-                        <li><strong>Phase 2 - Engagement Activation:</strong> First 7 days experience with curated events, mentor matchmaking, peer introductions</li>
-                        <li><strong>Phase 3 - Sustained Participation:</strong> Ongoing programs, leadership opportunities, feedback channels</li>
-                    </ul>
-                    
-                    <p style="margin-top: 16px;"><strong>Engagement Framework:</strong></p>
-                    <ul>
-                        <li>Weekly touchpoints (events, workshops, networking sessions)</li>
-                        <li>Quarterly feedback surveys with action items</li>
-                        <li>Recognition system for active members</li>
-                        <li>Clear progression path (member → contributor → leader)</li>
+                        <li>Phase 1 - Welcome & Orientation: Automated welcome sequence, community guidelines</li>
+                        <li>Phase 2 - Engagement Activation: First 7 days experience with curated events, mentor matchmaking</li>
+                        <li>Phase 3 - Sustained Participation: Ongoing programs, leadership opportunities, feedback channels</li>
                     </ul>
                 </div>
 
                 <div class="case-study-section">
-                    <h4>📊 Results</h4>
+                    <h4>Results</h4>
                     <div class="metrics">
                         <div class="metric-card">
                             <span class="metric-value">0→300+</span>
@@ -508,188 +678,117 @@
                             <span class="metric-value">40%</span>
                             <span class="metric-label">YoY Growth</span>
                         </div>
-                        <div class="metric-card">
-                            <span class="metric-value">20%</span>
-                            <span class="metric-label">Increase in participation</span>
-                        </div>
                     </div>
                 </div>
 
                 <div class="case-study-section">
-                    <h4>📚 Scalable Framework Created</h4>
+                    <h4>Scalable Framework</h4>
                     <p>
-                        Documented learnings into a <strong>Community Engagement Playbook</strong> now being implemented 
-                        across 50+ colleges in Kerala. The playbook includes:
+                        Documented learnings into a <strong>Community Engagement Playbook</strong> now implemented 
+                        across 50+ colleges in Kerala.
                     </p>
-                    <ul>
-                        <li>Onboarding templates and checklists</li>
-                        <li>Event planning frameworks</li>
-                        <li>Feedback collection systems</li>
-                        <li>Community health metrics dashboard</li>
-                        <li>Best practices for stakeholder management</li>
-                    </ul>
-                </div>
-
-                <div class="case-study-section">
-                    <h4>🎓 Key Learnings</h4>
-                    <ul>
-                        <li><strong>User research is critical:</strong> Early feedback loops prevented building wrong features</li>
-                        <li><strong>Onboarding makes or breaks retention:</strong> 80% of drop-off happened in first 14 days before we redesigned onboarding</li>
-                        <li><strong>Metrics drive decisions:</strong> Tracking satisfaction and engagement allowed us to iterate quickly</li>
-                        <li><strong>Stakeholder management is product work:</strong> Coordinating 20+ partners required clear communication frameworks</li>
-                    </ul>
                 </div>
             </div>
 
+            <div class="divider"></div>
+
             <!-- Case Study 3: Kerala Innovation Festival -->
             <div class="case-study">
-                <h3>Kerala Innovation Festival 2025: End-to-End Program Leadership</h3>
-                <div class="subtitle">Large-Scale Program Management | Team Building | Operations Excellence</div>
+                <h3>Kerala Innovation Festival 2025</h3>
+                <div class="subtitle">End-to-End Program Leadership • Team Building • Operations at Scale</div>
                 
                 <div class="feature-pills">
                     <span class="pill">Program Management</span>
                     <span class="pill">Hiring & Team Building</span>
                     <span class="pill">Stakeholder Coordination</span>
-                    <span class="pill">Operations at Scale</span>
+                    <span class="pill">Operations</span>
                 </div>
 
                 <div class="case-study-section">
-                    <h4>📋 Program Overview</h4>
+                    <h4>Program Overview</h4>
                     <p>
-                        Led multiple tracks for Kerala Innovation Festival 2025, the state's largest tech and innovation event. 
-                        Owned end-to-end execution from planning to post-event delivery, managing teams, stakeholders, and operations 
+                        Led multiple tracks for Kerala Innovation Festival 2025, managing end-to-end execution 
                         for 12,000+ participants across 150+ events.
                     </p>
-                    <p style="margin-top: 12px;">
-                        <strong>My Leadership Scope:</strong> Volunteer Management, Super 30 Core Team Hiring, 
-                        Precursor Hack (Gen AI Hackathon), Community Experience Zone
-                    </p>
                 </div>
 
                 <div class="case-study-section">
-                    <h4>📊 Scale & Impact</h4>
+                    <h4>Scale & Impact</h4>
                     <div class="metrics">
                         <div class="metric-card">
                             <span class="metric-value">12,000+</span>
-                            <span class="metric-label">Total Participants</span>
+                            <span class="metric-label">Participants</span>
                         </div>
                         <div class="metric-card">
                             <span class="metric-value">150+</span>
-                            <span class="metric-label">Events Coordinated</span>
-                        </div>
-                        <div class="metric-card">
-                            <span class="metric-value">100+</span>
-                            <span class="metric-label">Partner Organizations</span>
+                            <span class="metric-label">Events</span>
                         </div>
                         <div class="metric-card">
                             <span class="metric-value">2,000+</span>
                             <span class="metric-label">Applications Reviewed</span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="case-study-section">
-                    <h4>🎯 Track 1: Super 30 Core Team - Hiring & Selection</h4>
-                    <p><strong>Challenge:</strong> Build a high-performing core team to manage festival operations</p>
-                    
-                    <p style="margin-top: 12px;"><strong>Process Designed:</strong></p>
-                    <ul>
-                        <li><strong>Application Review:</strong> Screened 2,000+ applications, identifying key competencies and cultural fit</li>
-                        <li><strong>Multi-Stage Selection:</strong> Designed evaluation rubric covering skills, experience, motivation, and team dynamics</li>
-                        <li><strong>Final Selection:</strong> Hired 30 team members (1.5% acceptance rate - more selective than Harvard at 3.4%)</li>
-                        <li><strong>Onboarding:</strong> Created training modules and role-specific playbooks for seamless ramp-up</li>
-                    </ul>
-                    
-                    <div class="result-box" style="margin-top: 16px;">
-                        <strong>Impact:</strong> Super 30 team successfully managed 150+ events with minimal escalations, 
-                        demonstrating effective hiring and team-building process.
-                    </div>
-                </div>
-
-                <div class="case-study-section">
-                    <h4>👥 Track 2: Volunteer Management (100+ Volunteers)</h4>
-                    <ul>
-                        <li><strong>Team Coordination:</strong> Led 100+ volunteers across multiple event tracks, ensuring role clarity and coverage</li>
-                        <li><strong>Operations Playbook:</strong> Created volunteer guides, shift schedules, and communication protocols</li>
-                        <li><strong>Real-Time Management:</strong> Coordinated volunteers during festival through centralized command system</li>
-                        <li><strong>Recognition System:</strong> Designed volunteer appreciation framework including certificates and feedback sessions</li>
-                    </ul>
-                </div>
-
-                <div class="case-study-section">
-                    <h4>💻 Track 3: Precursor Hack - Gen AI Hackathon (200+ Participants)</h4>
-                    <p><strong>End-to-End Ownership:</strong> Planning → Execution → Post-Event Delivery</p>
-                    
-                    <ul>
-                        <li><strong>Planning:</strong> Designed hackathon structure, timeline, judging criteria, and participant journey</li>
-                        <li><strong>Stakeholder Coordination:</strong> Managed relationships with mentors, judges, sponsors, and technical partners</li>
-                        <li><strong>Logistics:</strong> Coordinated venue setup, meals, technical infrastructure, and support systems</li>
-                        <li><strong>Participant Experience:</strong> Ensured smooth registration, team formation, mentorship access, and judging process</li>
-                        <li><strong>Post-Event:</strong> Delivered certificates to all 200+ participants, collected feedback, documented learnings</li>
-                    </ul>
-                    
-                    <p style="margin-top: 12px;"><strong>Key Metric:</strong> 200+ participants engaged over 48 hours with 95%+ completion rate</p>
-                </div>
-
-                <div class="case-study-section">
-                    <h4>🌟 Track 4: Community Experience Zone</h4>
-                    <p><strong>Goal:</strong> Showcase Kerala's top tech communities to festival attendees</p>
-                    
-                    <p style="margin-top: 12px;"><strong>Selection Process:</strong></p>
-                    <ul>
-                        <li><strong>Community Leaders Meet (Kochi):</strong> Organized gathering of 50+ community leaders to understand community landscape</li>
-                        <li><strong>Evaluation Framework:</strong> Created rubric assessing community impact, engagement metrics, diversity, and sustainability</li>
-                        <li><strong>Curation:</strong> Shortlisted 10 communities from 50+ applications based on impact and relevance</li>
-                        <li><strong>Experience Design:</strong> Designed showcase format including booth setup, demo spaces, and networking opportunities</li>
-                    </ul>
-                    
-                    <div class="result-box" style="margin-top: 16px;">
-                        <strong>Impact:</strong> Community Experience Zone attracted 2,000+ visitors, 
-                        resulting in 500+ new community member signups and multiple inter-community collaborations.
-                    </div>
-                </div>
-
-                <div class="case-study-section">
-                    <h4>💼 Cross-Cutting Responsibilities</h4>
-                    <ul>
-                        <li><strong>Stakeholder Management:</strong> Coordinated with government bodies, corporate sponsors, educational institutions, and 100+ partner organizations</li>
-                        <li><strong>Budget Management:</strong> Owned budgeting for multiple tracks, vendor negotiations, and financial reporting</li>
-                        <li><strong>Communication Framework:</strong> Built RACI matrix and weekly sync cadence ensuring alignment across all stakeholders</li>
-                        <li><strong>Risk Mitigation:</strong> Anticipated and resolved operational bottlenecks in real-time during festival</li>
-                    </ul>
-                </div>
-
-                <div class="case-study-section">
-                    <h4>🎓 Key Learnings</h4>
-                    <ul>
-                        <li><strong>Hiring is everything:</strong> 1.5% acceptance rate for Super 30 created high-performing team that executed flawlessly</li>
-                        <li><strong>Systems over heroics:</strong> Playbooks and frameworks allowed 100+ volunteers to operate independently</li>
-                        <li><strong>End-to-end ownership drives results:</strong> Owning full lifecycle (planning → delivery → certificates) ensured no gaps</li>
-                        <li><strong>Stakeholder alignment is non-negotiable:</strong> Weekly syncs with 100+ partners prevented last-minute surprises</li>
-                        <li><strong>Community curation requires frameworks:</strong> Structured evaluation process ensured quality over quantity in Community Experience Zone</li>
-                    </ul>
-                </div>
-
-                <div class="case-study-section">
-                    <h4>📈 Quantified Outcomes</h4>
-                    <div class="metrics">
                         <div class="metric-card">
                             <span class="metric-value">1.5%</span>
-                            <span class="metric-label">Super 30 Acceptance Rate</span>
-                        </div>
-                        <div class="metric-card">
-                            <span class="metric-value">200+</span>
-                            <span class="metric-label">Hackathon Participants</span>
-                        </div>
-                        <div class="metric-card">
-                            <span class="metric-value">100+</span>
-                            <span class="metric-label">Volunteers Managed</span>
-                        </div>
-                        <div class="metric-card">
-                            <span class="metric-value">10/50</span>
-                            <span class="metric-label">Communities Curated</span>
+                            <span class="metric-label">Acceptance Rate</span>
                         </div>
                     </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>Super 30 Core Team - Hiring & Selection</h4>
+                    <p><strong>Challenge:</strong> Build a high-performing core team from 2,000+ applications</p>
+                    <ul>
+                        <li>Application Review: Screened 2,000+ applications for key competencies and cultural fit</li>
+                        <li>Multi-Stage Selection: Designed evaluation rubric covering skills, experience, motivation</li>
+                        <li>Final Selection: Hired 30 team members (1.5% acceptance rate)</li>
+                    </ul>
+                    <div class="result-box">
+                        <strong>Impact:</strong> Super 30 team successfully managed 150+ events with minimal escalations.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>Volunteer Management (100+ Volunteers)</h4>
+                    <ul>
+                        <li>Led 100+ volunteers across multiple event tracks</li>
+                        <li>Created volunteer guides, shift schedules, and communication protocols</li>
+                        <li>Coordinated real-time operations during festival</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>Precursor Hack - Gen AI Hackathon (200+ Participants)</h4>
+                    <p><strong>End-to-End Ownership:</strong> Planning → Execution → Post-Event Delivery</p>
+                    <ul>
+                        <li>Designed hackathon structure, timeline, and judging criteria</li>
+                        <li>Managed mentors, judges, sponsors, and technical partners</li>
+                        <li>Coordinated venue, meals, technical infrastructure</li>
+                        <li>Delivered certificates to all 200+ participants</li>
+                    </ul>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>Community Experience Zone</h4>
+                    <p><strong>Goal:</strong> Showcase Kerala's top tech communities</p>
+                    <ul>
+                        <li>Organized Community Leaders Meet in Kochi with 50+ leaders</li>
+                        <li>Created evaluation framework assessing community impact and engagement</li>
+                        <li>Curated 10 communities from 50+ applications</li>
+                        <li>Designed showcase experience attracting 2,000+ visitors</li>
+                    </ul>
+                    <div class="result-box">
+                        <strong>Impact:</strong> 500+ new community member signups and multiple inter-community collaborations.
+                    </div>
+                </div>
+
+                <div class="case-study-section">
+                    <h4>Key Learnings</h4>
+                    <ul>
+                        <li>1.5% acceptance rate for Super 30 created high-performing team</li>
+                        <li>Systems and playbooks enabled 100+ volunteers to operate independently</li>
+                        <li>End-to-end ownership ensured seamless execution</li>
+                        <li>Structured evaluation process ensured quality over quantity</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -703,10 +802,10 @@
                     <ul>
                         <li>User Research & Interviews</li>
                         <li>Product Roadmapping</li>
-                        <li>Feature Prioritization (RICE, ICE)</li>
-                        <li>A/B Testing & Experimentation</li>
+                        <li>Feature Prioritization</li>
+                        <li>A/B Testing</li>
                         <li>Metrics & Data Analysis</li>
-                        <li>Product-Market Fit Evaluation</li>
+                        <li>Product-Market Fit</li>
                     </ul>
                 </div>
                 <div class="skill-category">
@@ -717,7 +816,7 @@
                         <li>Budget Management</li>
                         <li>Risk Mitigation</li>
                         <li>Program Reporting</li>
-                        <li>Agile/Scrum Methodologies</li>
+                        <li>Agile/Scrum</li>
                     </ul>
                 </div>
                 <div class="skill-category">
@@ -737,7 +836,7 @@
         <!-- Contact Section -->
         <div class="section" id="contact">
             <h2 class="section-title">Let's Connect</h2>
-            <p style="margin-bottom: 24px; font-size: 1.1em; color: #4b5563;">
+            <p style="margin-bottom: 40px; font-size: 1.2em; color: #515154; text-align: center; max-width: 700px; margin-left: auto; margin-right: auto;">
                 I'm currently seeking Associate Product Manager opportunities where I can apply my user research 
                 and product thinking skills to build products that users love.
             </p>
@@ -748,7 +847,7 @@
                 </div>
                 <div class="contact-item">
                     <span>💼</span>
-                    <a href="https://linkedin.com/in/mubeenakp" target="_blank">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/mubeena-k-p-141578203/" target="_blank">Connect on LinkedIn</a>
                 </div>
                 <div class="contact-item">
                     <span>💻</span>
@@ -759,15 +858,11 @@
                     <a href="tel:+918593005926">+91 8593 005 926</a>
                 </div>
             </div>
-            <div style="margin-top: 32px; text-align: center;">
-                <a href="Mubeena_KP_Resume.pdf" class="btn btn-primary" download>Download Resume (PDF)</a>
-            </div>
         </div>
 
         <!-- Footer -->
-        <div style="text-align: center; padding: 40px 0; color: #9ca3af;">
-            <p>Built with focus on user-centric design principles 🚀</p>
-            <p style="margin-top: 8px;">© 2025 Mubeena K P</p>
+        <div class="footer">
+            <p>© 2025 Mubeena K P</p>
         </div>
     </div>
 </body>
